@@ -11,7 +11,7 @@ def public_key_generator():
     
     pminus1 = sub_n(p, 1, 4)
     qminus1 = sub_n(q, 1, 4)
-
+    print(p, q)
     N = p*q
     print("N: ", N)
     n = multiply4x4(p, q)
