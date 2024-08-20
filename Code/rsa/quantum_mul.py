@@ -55,14 +55,14 @@ class multiply:
     # Implementing quantum circuit of grade school multiplication algorithm
     def quantum_multiplication(self,multiplier, multiplicand):
         """The function multiplied two quantum number"""
-        print("Multiplier")
-        for ele in multiplier:
-            print(ele, end=' ')
+        # print("Multiplier")
+        # for ele in multiplier:
+        #     print(ele, end=' ')
 
-        print("\nmultiplicand")
-        for ele in multiplicand:
-            print(ele, end=' ')
-        print("\nend")
+        # print("\nmultiplicand")
+        # for ele in multiplicand:
+        #     print(ele, end=' ')
+        # print("\nend")
 
         temp_pro = [self.state_1]*16
 
@@ -70,25 +70,21 @@ class multiply:
         x0y1 = self.ppg(multiplier[0], multiplicand[1], temp_pro[1])[-1]
         x0y2 = self.ppg(multiplier[0], multiplicand[2], temp_pro[2])[-1]
         x0y3 = self.ppg(multiplier[0], multiplicand[3], temp_pro[3])[-1]
-        print(x0y0, x0y1, x0y2, x0y3)
 
         x1y0 = self.ppg(multiplier[1], multiplicand[0], temp_pro[4])[-1]
         x1y1 = self.ppg(multiplier[1], multiplicand[1], temp_pro[5])[-1]
         x1y2 = self.ppg(multiplier[1], multiplicand[2], temp_pro[6])[-1]
         x1y3 = self.ppg(multiplier[1], multiplicand[3], temp_pro[7])[-1]
-        print(x1y0, x1y1, x1y2, x1y3)
 
         x2y0 = self.ppg(multiplier[2], multiplicand[0], temp_pro[8])[-1]
         x2y1 = self.ppg(multiplier[2], multiplicand[1], temp_pro[9])[-1]
         x2y2 = self.ppg(multiplier[2], multiplicand[2], temp_pro[10])[-1]
         x2y3 = self.ppg(multiplier[2], multiplicand[3], temp_pro[11])[-1]
-        print(x2y0, x2y1, x2y2, x2y3)
 
         x3y0 = self.ppg(multiplier[3], multiplicand[0], temp_pro[12])[-1]
         x3y1 = self.ppg(multiplier[3], multiplicand[1], temp_pro[13])[-1]
         x3y2 = self.ppg(multiplier[3], multiplicand[2], temp_pro[14])[-1]
         x3y3 = self.ppg(multiplier[3], multiplicand[3], temp_pro[15])[-1]
-        print(x3y0, x3y1, x3y2, x3y3)
 
         # pro = [self.state_1]*8
         # c = [[self.state_1]*2]*8
