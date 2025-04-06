@@ -1,0 +1,34 @@
+
+Warnings: 
+
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\quantumComputer_twoQubit.m, line : 20, column : 22. The expression 'ControlQubit = fi(0,0,16,0)' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\quantumComputer_twoQubit.m, line : 21, column : 14. The expression 'op_0 = getControledOperator(op_0_1,ControlQubit)' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\quantumComputer_twoQubit.m, line : 24, column : 26. The expression 'ControlQubit = fi(1,0,16,0)' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\quantumComputer_twoQubit.m, line : 25, column : 18. The expression 'op_0 = getControledOperator(op_0_0,ControlQubit)' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\quantumComputer_twoQubit.m, line : 32, column : 22. The expression 'ControlQubit = fi(0,0,16,0)' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\quantumComputer_twoQubit.m, line : 33, column : 14. The expression 'op_1 = getControledOperator(op_1_1,ControlQubit)' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\quantumComputer_twoQubit.m, line : 36, column : 26. The expression 'ControlQubit = fi(1,0,16,0)' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\quantumComputer_twoQubit.m, line : 37, column : 18. The expression 'op_1 = getControledOperator(op_1_0,ControlQubit)' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\quantumComputer_twoQubit.m, line : 48, column : 26. The expression 'ControlQubit = fi(1,0,16,0)' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\quantumComputer_twoQubit.m, line : 49, column : 18. The expression 'op_2 = getControledOperator(op_2_0,ControlQubit)' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\quantumComputer_twoQubit.m, line : 51, column : 18. The expression 'op_2 = prodotto_di_kronecker(op_2_0,op_2_1)' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\getOperator.m, line : 27, column : 15. The expression 'op(:) = [1 0; 0 1]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\getOperator.m, line : 29, column : 15. The expression 'op(:) = [0 1; 1 0]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\getOperator.m, line : 31, column : 15. The expression 'op(:) = [0 -1i; 1i 0]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\getOperator.m, line : 35, column : 15. The expression 'op(:) = 0.707106781186547*[1 1; 1 -1]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\getOperator.m, line : 37, column : 15. The expression 'op(:) = [1 0; 0 1i]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\getOperator.m, line : 39, column : 15. The expression 'op(:) = [1 0; 0 ...
+            0.707106781186547+1i*0.707106781186547]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\getOperator.m, line : 42, column : 15. The expression 'op(:) = [1 0; 0 -1i]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\getOperator.m, line : 44, column : 15. The expression 'op(:) = [1 0; 0 ...
+            0.707106781186547-1i*0.707106781186547]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\getOperator.m, line : 47, column : 15. The expression 'op(:) = [1 0; 0 coseno_theta+1i*seno_theta]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\getOperator.m, line : 49, column : 15. The expression 'op(:) = 0.707106781186547*[1  -(coseno_theta+1i*seno_theta); ...
+            coseno_phi+1i*seno_phi  coseno_theta*coseno_phi-seno_theta...
+            *seno_phi+1i*(seno_theta*coseno_phi+coseno_theta*seno_phi)]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\getOperator.m, line : 62, column : 15. The expression 'op(:) = [coseno_half_theta-1i*seno_half_theta 0; 0 coseno_half_theta+1i*seno_half_theta]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\getControledOperator.m, line : 17, column : 19. The expression 'op(:) = [1 0 0 0; 
+                0 baseOp_temp(1,1) 0 baseOp_temp(1,2);
+                0 0 1 0; 
+                0 baseOp_temp(2,1) 0 baseOp_temp(2,2)]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\two_qubit_system\getControledOperator.m, line : 22, column : 19. The expression 'op(:) = zeros(4)' was not executed during simulation. Consider using a more thorough testbench.

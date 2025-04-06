@@ -1,4 +1,4 @@
-function values = generazione_file_mif_hex_32(opName_0, theta_0, phi_0, lambda_0, opName_1, theta_1, phi_1, lambda_1, initState_0, initState_1)
+ function values = generazione_file_mif_hex_32(opName_0, theta_0, phi_0, lambda_0, opName_1, theta_1, phi_1, lambda_1, initState_0, initState_1)
     opName_0_hex = [opName_0.hex(1, :); opName_0.hex(2, :); opName_0.hex(3,:)];
     theta_0_hex = [theta_0.hex(1, :); theta_0.hex(2, :); theta_0.hex(3,:)];
     phi_0_hex = [phi_0.hex(1,:); phi_0.hex(2, :); phi_0.hex(3,:)];

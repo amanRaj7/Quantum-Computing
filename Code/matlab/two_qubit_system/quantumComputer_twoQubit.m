@@ -1,6 +1,6 @@
 function [computerState, probFinal, probQubit0, probQubit1] = quantumComputer_twoQubit(opName_0,theta_0...
     ,phi_0,lambda_0,opName_1,theta_1,phi_1,lambda_1,initState_0,initState_1)
-    nt_numerictype(1,16,15);
+    nt=numerictype(1,16,15);
     State_template_real = fi([],nt);
     State_template_imag = fi([],nt);
     State_template = complex(State_template_real,State_template_imag);

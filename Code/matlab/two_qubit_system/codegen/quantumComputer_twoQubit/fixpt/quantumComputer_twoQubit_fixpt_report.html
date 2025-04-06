@@ -1,0 +1,483 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fixed-Point Report for quantumComputer_twoQubit_fixpt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+	body { font-family: monospace; }
+	h2 { font-family: Arial, Helvetica, sans-serif; color: #990000; margin-top: 50px; }
+	table,th,td { border: 1px solid black; }
+	table { margin-top: 30px; }
+	th { align: center; font-weight: bold; }
+	tr.h { background-color: #99CCFF; }
+	tr.a { background-color: #EEEEFF; }
+	tr.b { background-color: #FFFFFF; }
+	tr.c { background-color: #FFA500; }
+	tr.a td, tr.b td { border-style: none; }
+	td.left { text-align: left; }
+	td.right { text-align: right; }
+	td.center { text-align: center; }
+	td.bold { font-weight: bold; }
+	pre { padding: 0px; margin: 0px; }
+	span { font-style: italic; }
+</style>
+</head>
+<body>
+<h3>Generated on  2025-03-31 15:11:18</h3>
+<p>The following table shows fixed point instrumentation results</p>
+<h2>Fixed-Point Report <span>two_qubit_register<span></h2>
+<pre>function C = two_qubit_register(c1, c2)
+    c_00 = c1(1, 1)*c2(1, 1);
+    c_01 = c1(1, 1)*c2(2, 1);
+    c_10 = c1(2, 1)*c2(1, 1);
+    c_11 = c1(2, 1)*c2(2, 1);
+
+    C = [c_00; c_01; c_01; c_11];
+end</pre><TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th></TR><TR class="a">
+<TD class="left">C</TD><TD class="left">numerictype(1, 33, 30) 4 x 1 complex </TD><TD class="right">0.03982720337808132</TD><TD class="right">0.5944208288565278</TD></TR>
+<TR class="b">
+<TD class="left">c1</TD><TD class="left">numerictype(1, 16, 15) 2 x 1 complex </TD><TD class="right">0.031524658203125</TD><TD class="right">0.772796630859375</TD></TR>
+<TR class="a">
+<TD class="left">c2</TD><TD class="left">numerictype(1, 16, 15) 2 x 1 complex </TD><TD class="right">0.031524658203125</TD><TD class="right">0.772796630859375</TD></TR>
+<TR class="b">
+<TD class="left">c_00</TD><TD class="left">numerictype(1, 33, 30)complex </TD><TD class="right">0.08169456571340561</TD><TD class="right">0.5944208288565278</TD></TR>
+<TR class="a">
+<TD class="left">c_01</TD><TD class="left">numerictype(1, 33, 30)complex </TD><TD class="right">0.05775068607181311</TD><TD class="right">0.48649648297578096</TD></TR>
+<TR class="b">
+<TD class="left">c_10</TD><TD class="left">numerictype(1, 33, 30)complex </TD><TD class="right">0.05775068607181311</TD><TD class="right">0.48649648297578096</TD></TR>
+<TR class="a">
+<TD class="left">c_11</TD><TD class="left">numerictype(1, 33, 30)complex </TD><TD class="right">0.03982720337808132</TD><TD class="right">0.398030050098896</TD></TR>
+</TABLE>
+
+<h2>Fixed-Point Report <span>getOperator<span></h2>
+<pre>function op = getOperator(opName, theta, phi, lambda)
+    fm = fimath('RoundingMethod','Nearest',...
+            'OverflowAction','Saturate', ...
+            'ProductMode','SpecifyPrecision', ...
+            'ProductWordLength', 16, ...
+            'ProductFractionLength', 15, ...
+            'SumMode', 'SpecifyPrecision', ...
+            'SumWordLength', 16, ...
+            'SumFractionLength', 15, ...
+            'CastBeforeSum', true);
+    nt = numerictype(1, 16, 15);
+    op_real = fi([], nt, fm);
+    op_imag = fi([], nt, fm);
+    op_template = complexx(op_real, op_imag);
+
+    [fmo_1, fmo_2] = cordicsincos(phi, 15);
+    seno_phi = fmo_1;
+    coseno_phi = fmo_2;
+
+    half_theta = bitsra(theta, 1);
+    [fmo_3, fmo_4] = cordicsincos(half_theta, 15);
+    seno_half_theta = fmo_3;
+    coseno_half_theta = fmo_4;
+    
+    [fmo_5, fmo_6] = cordicsincos(theta, 15);
+    seno_theta = fmo_5;
+    coseno_theta = fmo_6;
+    [fmo_7, fmo_8] = cordicsincos(lambda, 15);
+    seno_lambda = fmo_7;
+    coseno_lambda = fmo_8;
+
+    op = cast([0; 0; 0; 0], 'like', op_template);
+
+    if opName == fi(0,0,16,0)
+        op(:) = [1 0; 0 1];
+    elseif opName == fi(1,0,16,0)
+        op(:) = [0 1; 1 0];
+    elseif opName == fi(2,0,16,0)
+        op(:) = [0 -1i; 1i 0];
+    elseif opName == fi(3,0,16,0)
+        op(:) = [1 0; 0 -1];
+    elseif opName == fi(4,0,16,0)
+        op(:) = 0.707106781186547*[1 1; 1 -1];
+    elseif opName == fi(5,0,16,0)
+        op(:) = [1 0; 0 1i];
+    elseif opName == fi(6,0,16,0)
+        op(:) = [1 0; 0 ...
+            0.707106781186547+1i*0.707106781186547];
+    elseif opName == fi(7,0,16,0)
+        op(:) = [1 0; 0 -1i];
+    elseif opName == fi(8,0,16,0)
+        op(:) = [1 0; 0 ...
+            0.707106781186547-1i*0.707106781186547];
+    elseif opName == fi(9,0,16,0)
+        op(:) = [1 0; 0 coseno_theta+1i*seno_theta];
+    elseif opName == fi(10,0,16,0)
+        op(:) = 0.707106781186547*[1  -(coseno_theta+1i*seno_theta); ...
+            coseno_phi+1i*seno_phi  coseno_theta*coseno_phi-seno_theta...
+            *seno_phi+1i*(seno_theta*coseno_phi+coseno_theta*seno_phi)];
+    elseif opName == fi(11,0,16,0)
+        op(:) = [coseno_half_theta  -(coseno_lambda*seno_half_theta+1i*(seno_lambda*seno_half_theta)); ...
+            coseno_phi*seno_half_theta+1i*seno_phi*seno_half_theta  ...
+            (coseno_lambda*coseno_phi-seno_lambda*seno_phi)*coseno_half_theta+1i*(seno_lambda*coseno_phi+...
+            coseno_lambda*seno_phi)*coseno_half_theta];
+    elseif opName == fi(12,0,16,0)
+        op(:) = [coseno_half_theta -1i*seno_half_theta; -1i*seno_half_theta coseno_half_theta];
+    elseif opName == fi(13,0,16,0)
+        op(:) = [coseno_half_theta fi_uminus(seno_half_theta); seno_half_theta coseno_half_theta];
+    elseif opName == fi(14,0,16,0)
+        op(:) = [coseno_half_theta-1i*seno_half_theta 0; 0 coseno_half_theta+1i*seno_half_theta];
+    else
+        op(:) = [0 0; 0 0];
+    end
+end</pre><TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th></TR><TR class="a">
+<TD class="left">coseno_half_theta</TD><TD class="left">numerictype(1, 16, 14)</TD><TD class="right">0.70721435546875</TD><TD class="right">0.99993896484375</TD></TR>
+<TR class="b">
+<TD class="left">coseno_lambda</TD><TD class="left">numerictype(1, 16, 14)</TD><TD class="right">0.94000244140625</TD><TD class="right">0.99993896484375</TD></TR>
+<TR class="a">
+<TD class="left">coseno_phi</TD><TD class="left">numerictype(1, 16, 14)</TD><TD class="right">0.99993896484375</TD><TD class="right">0.99993896484375</TD></TR>
+<TR class="b">
+<TD class="left">coseno_theta</TD><TD class="left">numerictype(1, 16, 14)</TD><TD class="right">-6.103515625e-05</TD><TD class="right">0.99993896484375</TD></TR>
+<TR class="a">
+<TD class="left">fmo_1</TD><TD class="left">numerictype(1, 16, 14)</TD><TD class="right">0.000244140625</TD><TD class="right">0.000244140625</TD></TR>
+<TR class="b">
+<TD class="left">fmo_2</TD><TD class="left">numerictype(1, 16, 14)</TD><TD class="right">0.99993896484375</TD><TD class="right">0.99993896484375</TD></TR>
+<TR class="a">
+<TD class="left">fmo_3</TD><TD class="left">numerictype(1, 16, 14)</TD><TD class="right">-0.7071533203125</TD><TD class="right">0.3828125</TD></TR>
+<TR class="b">
+<TD class="left">fmo_4</TD><TD class="left">numerictype(1, 16, 14)</TD><TD class="right">0.70721435546875</TD><TD class="right">0.99993896484375</TD></TR>
+<TR class="a">
+<TD class="left">fmo_5</TD><TD class="left">numerictype(1, 16, 14)</TD><TD class="right">-1.00006103515625</TD><TD class="right">0.70709228515625</TD></TR>
+<TR class="b">
+<TD class="left">fmo_6</TD><TD class="left">numerictype(1, 16, 14)</TD><TD class="right">-6.103515625e-05</TD><TD class="right">0.99993896484375</TD></TR>
+<TR class="a">
+<TD class="left">fmo_7</TD><TD class="left">numerictype(1, 16, 14)</TD><TD class="right">-0.3421630859375</TD><TD class="right">0.000244140625</TD></TR>
+<TR class="b">
+<TD class="left">fmo_8</TD><TD class="left">numerictype(1, 16, 14)</TD><TD class="right">0.94000244140625</TD><TD class="right">0.99993896484375</TD></TR>
+<TR class="a">
+<TD class="left">half_theta</TD><TD class="left">numerictype(1, 16, 13)</TD><TD class="right">-0.785400390625</TD><TD class="right">0.3927001953125</TD></TR>
+<TR class="b">
+<TD class="left">lambda</TD><TD class="left">numerictype(1, 16, 13)</TD><TD class="right">-0.34912109375</TD><TD class="right">0</TD></TR>
+<TR class="a">
+<TD class="left">op</TD><TD class="left">numerictype(1, 16, 15) 4 x 1 complex </TD><TD class="right">-1</TD><TD class="right">0.999969482421875</TD></TR>
+<TR class="b">
+<TD class="left">opName</TD><TD class="left">numerictype(0, 16, 0)</TD><TD class="right">3</TD><TD class="right">15</TD></TR>
+<TR class="a">
+<TD class="left">op_imag</TD><TD class="left">numerictype(1, 16, 15) 0 x 0 </TD><TD class="right">Unknown</TD><TD class="right">Unknown</TD></TR>
+<TR class="b">
+<TD class="left">op_real</TD><TD class="left">numerictype(1, 16, 15) 0 x 0 </TD><TD class="right">Unknown</TD><TD class="right">Unknown</TD></TR>
+<TR class="a">
+<TD class="left">op_template</TD><TD class="left">numerictype(1, 16, 15) 0 x 0 complex </TD><TD class="right">Unknown</TD><TD class="right">Unknown</TD></TR>
+<TR class="b">
+<TD class="left">phi</TD><TD class="left">numerictype(1, 16, 13)</TD><TD class="right">0</TD><TD class="right">0</TD></TR>
+<TR class="a">
+<TD class="left">seno_half_theta</TD><TD class="left">numerictype(1, 16, 14)</TD><TD class="right">-0.7071533203125</TD><TD class="right">0.3828125</TD></TR>
+<TR class="b">
+<TD class="left">seno_lambda</TD><TD class="left">numerictype(1, 16, 14)</TD><TD class="right">-0.3421630859375</TD><TD class="right">0.000244140625</TD></TR>
+<TR class="a">
+<TD class="left">seno_phi</TD><TD class="left">numerictype(1, 16, 14)</TD><TD class="right">0.000244140625</TD><TD class="right">0.000244140625</TD></TR>
+<TR class="b">
+<TD class="left">seno_theta</TD><TD class="left">numerictype(1, 16, 14)</TD><TD class="right">-1.00006103515625</TD><TD class="right">0.70709228515625</TD></TR>
+<TR class="a">
+<TD class="left">theta</TD><TD class="left">numerictype(1, 16, 13)</TD><TD class="right">-1.57080078125</TD><TD class="right">0.785400390625</TD></TR>
+</TABLE>
+
+<h2>Fixed-Point Report <span>getControledOperator<span></h2>
+<pre>function op = getControledOperator(baseOp, ControlQubit)
+    fm = get_fimath();
+
+    fm = fimath('RoundingMethod','Nearest',...
+        'OverflowAction','Saturate',...
+        'ProductMode','FullPrecision',...
+        'SumMode','FullPrecision');
+    nt = numerictype(1,16,15);
+
+    op_real = fi([],nt,fm);
+    op_imag = fi([],nt,fm);
+    op_template = complexx(op_real,op_imag);
+    op = cast(zeros(16,1),'like', op_template);
+
+    baseOp_temp = reshape(baseOp,2,2);
+        if ControlQubit == 0
+            op(:) = [fi(eye(2), 0, 1, 0, fm) zeros(2); fi(zeros(2), 0, 1, 0, fm) baseOp_temp];
+        elseif ControlQubit == 1
+            op(:) = [fi(1, 0, 1, 0, fm) 0 0 0; 
+                fi(0, 0, 1, 0, fm) baseOp_temp(1,1) 0 baseOp_temp(1,2);
+                fi(0, 0, 1, 0, fm) 0 1 0; 
+                fi(0, 0, 1, 0, fm) baseOp_temp(2,1) 0 baseOp_temp(2,2)];
+        else
+            op(:) = zeros(4);
+        end
+end</pre><TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th></TR><TR class="a">
+<TD class="left">ControlQubit</TD><TD class="left">numerictype(0, 16, 0)</TD><TD class="right">0</TD><TD class="right">0</TD></TR>
+<TR class="b">
+<TD class="left">baseOp</TD><TD class="left">numerictype(1, 16, 15) 4 x 1 complex </TD><TD class="right">-0.33026123046875</TD><TD class="right">0.9659423828125</TD></TR>
+<TR class="a">
+<TD class="left">baseOp_temp</TD><TD class="left">numerictype(1, 16, 15) 2 x 2 complex </TD><TD class="right">-0.33026123046875</TD><TD class="right">0.9659423828125</TD></TR>
+<TR class="b">
+<TD class="left">op</TD><TD class="left">numerictype(1, 16, 15) 16 x 1 complex </TD><TD class="right">0</TD><TD class="right">0.999969482421875</TD></TR>
+<TR class="a">
+<TD class="left">op_imag</TD><TD class="left">numerictype(1, 16, 15) 0 x 0 </TD><TD class="right">Unknown</TD><TD class="right">Unknown</TD></TR>
+<TR class="b">
+<TD class="left">op_real</TD><TD class="left">numerictype(1, 16, 15) 0 x 0 </TD><TD class="right">Unknown</TD><TD class="right">Unknown</TD></TR>
+<TR class="a">
+<TD class="left">op_template</TD><TD class="left">numerictype(1, 16, 15) 0 x 0 complex </TD><TD class="right">Unknown</TD><TD class="right">Unknown</TD></TR>
+</TABLE>
+
+<h2>Fixed-Point Report <span>prodotto_di_kronecker<span></h2>
+<pre>function C = prodotto_di_kronecker(c1, c2)
+    fm = fimath('RoundingMethod','Nearest', 'OverflowAction','Saturate', 'ProductMode', 'FullPrecision', 'SumMode', 'FullPrecision');
+    nt = numerictype(1, 16, 15);
+    C_real = fi([], nt, fm);
+    C_imag = fi([], nt, fm);
+    C_template = complexx(C_real, C_imag);
+    C = cast(zeros(16, 1), 'like', C_template);
+    c1_temp = reshape(c1, 2, 2);
+    c2_temp = reshape(c2, 2, 2);
+    c_00 = c1_temp(1, 1)*c2_temp;
+    c_01 = c1_temp(1, 2)*c2_temp;
+    c_10 = c1_temp(2, 1)*c2_temp;
+    c_11 = c1_temp(2, 2)*c2_temp;
+    C_temp = [c_00 c_01; c_10 c_11];
+    C(:) = C_temp(:);
+end</pre><TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th></TR><TR class="a">
+<TD class="left">C</TD><TD class="left">numerictype(1, 16, 15) 16 x 1 complex </TD><TD class="right">-0.70721435546875</TD><TD class="right">0.85333251953125</TD></TR>
+<TR class="b">
+<TD class="left">C_imag</TD><TD class="left">numerictype(1, 16, 15) 0 x 0 </TD><TD class="right">Unknown</TD><TD class="right">Unknown</TD></TR>
+<TR class="a">
+<TD class="left">C_real</TD><TD class="left">numerictype(1, 16, 15) 0 x 0 </TD><TD class="right">Unknown</TD><TD class="right">Unknown</TD></TR>
+<TR class="b">
+<TD class="left">C_temp</TD><TD class="left">numerictype(1, 16, 15) 4 x 4 complex </TD><TD class="right">-0.70721435546875</TD><TD class="right">0.85333251953125</TD></TR>
+<TR class="a">
+<TD class="left">C_template</TD><TD class="left">numerictype(1, 16, 15) 0 x 0 complex </TD><TD class="right">Unknown</TD><TD class="right">Unknown</TD></TR>
+<TR class="b">
+<TD class="left">c1</TD><TD class="left">numerictype(1, 16, 15) 4 x 1 complex </TD><TD class="right">-1</TD><TD class="right">0.999969482421875</TD></TR>
+<TR class="a">
+<TD class="left">c1_temp</TD><TD class="left">numerictype(1, 16, 15) 2 x 2 complex </TD><TD class="right">-1</TD><TD class="right">0.999969482421875</TD></TR>
+<TR class="b">
+<TD class="left">c2</TD><TD class="left">numerictype(1, 16, 15) 4 x 1 complex </TD><TD class="right">-0.7071533203125</TD><TD class="right">0.92376708984375</TD></TR>
+<TR class="a">
+<TD class="left">c2_temp</TD><TD class="left">numerictype(1, 16, 15) 2 x 2 complex </TD><TD class="right">-0.7071533203125</TD><TD class="right">0.92376708984375</TD></TR>
+<TR class="b">
+<TD class="left">c_00</TD><TD class="left">numerictype(1, 16, 15) 2 x 2 complex </TD><TD class="right">-0.707122802734375</TD><TD class="right">0.85333251953125</TD></TR>
+<TR class="a">
+<TD class="left">c_01</TD><TD class="left">numerictype(1, 16, 15) 2 x 2 complex </TD><TD class="right">-0.3536376953125</TD><TD class="right">0</TD></TR>
+<TR class="b">
+<TD class="left">c_10</TD><TD class="left">numerictype(1, 16, 15) 2 x 2 complex </TD><TD class="right">-0.3536376953125</TD><TD class="right">0</TD></TR>
+<TR class="a">
+<TD class="left">c_11</TD><TD class="left">numerictype(1, 16, 15) 2 x 2 complex </TD><TD class="right">-0.70721435546875</TD><TD class="right">0.85333251953125</TD></TR>
+</TABLE>
+
+<h2>Fixed-Point Report <span>matrix_complex_mults_s1<span></h2>
+<pre>function C = matrix_complex_mults_s1(A,B)
+    A_temp = reshape(A,4,4);
+    B_temp = reshape(B,4,4);
+    C_temp = A_temp*B_temp;
+    C = C_temp(:);
+end</pre><TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th></TR><TR class="a">
+<TD class="left">A</TD><TD class="left">numerictype(1, 16, 15) 16 x 1 complex </TD><TD class="right">-0.3536376953125</TD><TD class="right">0.85333251953125</TD></TR>
+<TR class="b">
+<TD class="left">A_temp</TD><TD class="left">numerictype(1, 16, 15) 4 x 4 complex </TD><TD class="right">-0.3536376953125</TD><TD class="right">0.85333251953125</TD></TR>
+<TR class="a">
+<TD class="left">B</TD><TD class="left">numerictype(1, 16, 15) 16 x 1 complex </TD><TD class="right">-0.70721435546875</TD><TD class="right">0.707183837890625</TD></TR>
+<TR class="b">
+<TD class="left">B_temp</TD><TD class="left">numerictype(1, 16, 15) 4 x 4 complex </TD><TD class="right">-0.70721435546875</TD><TD class="right">0.707183837890625</TD></TR>
+<TR class="a">
+<TD class="left">C</TD><TD class="left">numerictype(1, 35, 30) 16 x 1 complex </TD><TD class="right">-0.6034890078008175</TD><TD class="right">0.6034629661589861</TD></TR>
+<TR class="b">
+<TD class="left">C_temp</TD><TD class="left">numerictype(1, 35, 30) 4 x 4 complex </TD><TD class="right">-0.6034890078008175</TD><TD class="right">0.6034629661589861</TD></TR>
+</TABLE>
+
+<h2>Fixed-Point Report <span>matrix_complex_mults_s2<span></h2>
+<pre>function C = matrix_complex_mults_s2(A,B)
+    A_temp = reshape(A,4,4);
+    B_temp = reshape(B,4,4);
+    C_temp = A_temp*B_temp;
+    C = C_temp(:);
+end</pre><TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th></TR><TR class="a">
+<TD class="left">A</TD><TD class="left">numerictype(1, 16, 15) 16 x 1 complex </TD><TD class="right">0</TD><TD class="right">0.999969482421875</TD></TR>
+<TR class="b">
+<TD class="left">A_temp</TD><TD class="left">numerictype(1, 16, 15) 4 x 4 complex </TD><TD class="right">0</TD><TD class="right">0.999969482421875</TD></TR>
+<TR class="a">
+<TD class="left">B</TD><TD class="left">numerictype(1, 35, 30) 16 x 1 complex </TD><TD class="right">-0.6034890078008175</TD><TD class="right">0.6034629661589861</TD></TR>
+<TR class="b">
+<TD class="left">B_temp</TD><TD class="left">numerictype(1, 35, 30) 4 x 4 complex </TD><TD class="right">-0.6034890078008175</TD><TD class="right">0.6034629661589861</TD></TR>
+<TR class="a">
+<TD class="left">C</TD><TD class="left">numerictype(1, 54, 45) 16 x 1 complex </TD><TD class="right">-0.6034705907778743</TD><TD class="right">0.6034445499307708</TD></TR>
+<TR class="b">
+<TD class="left">C_temp</TD><TD class="left">numerictype(1, 54, 45) 4 x 4 complex </TD><TD class="right">-0.6034705907778743</TD><TD class="right">0.6034445499307708</TD></TR>
+</TABLE>
+
+<h2>Fixed-Point Report <span>Apply_Operator<span></h2>
+<pre>function C = Apply_Operator(Operator, A)
+    Operator_temp = reshape(Operator,4,4);
+    A = reshape(A, 4, 1);
+    C = Operator_temp*A;
+end</pre><TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th></TR><TR class="a">
+<TD class="left">A</TD><TD class="left">numerictype(1, 33, 30) 4 x 1 complex </TD><TD class="right">0.03982720337808132</TD><TD class="right">0.5944208288565278</TD></TR>
+<TR class="b">
+<TD class="left">C</TD><TD class="left">numerictype(1, 90, 75) 4 x 1 complex </TD><TD class="right">-0.4832336342554528</TD><TD class="right">0.6126958794111299</TD></TR>
+<TR class="a">
+<TD class="left">Operator</TD><TD class="left">numerictype(1, 54, 45) 16 x 1 complex </TD><TD class="right">-0.6034705907778743</TD><TD class="right">0.6034445499307708</TD></TR>
+<TR class="b">
+<TD class="left">Operator_temp</TD><TD class="left">numerictype(1, 54, 45) 4 x 4 complex </TD><TD class="right">-0.6034705907778743</TD><TD class="right">0.6034445499307708</TD></TR>
+</TABLE>
+
+<h2>Fixed-Point Report <span>probFinal_twoQubit<span></h2>
+<pre>function [probFinal,probQubit0,probQubit1] = probFinal_twoQubit(computerState)
+    fm = fimath('RoundingMethod','Nearest',...
+        'OverflowAction','Saturate',...
+        'ProductMode','FullPrecision',...
+        'SumMode','FullPrecision');
+    nt = numerictype(0,16,16);
+    prob = fi([0; 0; 0; 0], nt, fm);
+    probFinal = fi([0; 0; 0; 0], nt, fm);
+    probQubit0 = fi([0; 0], nt, fm);
+    probQubit1 = fi([0; 0], nt, fm);
+    abs_value = cordicabs(computerState,15);
+    prob(:) = abs_value.*abs_value;
+    probQubit0(:) = [prob(1,1)+prob(2,1);
+                    prob(3,1)+prob(4,1)];
+
+    probQubit1(:) = [prob(1,1)+prob(3,1);
+                    prob(2,1)+prob(4,1)];
+    probFinal(:) = prob;
+end</pre><TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th></TR><TR class="a">
+<TD class="left">abs_value</TD><TD class="left">numerictype(1, 18, 15) 4 x 1 </TD><TD class="right">0.26019287109375</TD><TD class="right">0.696136474609375</TD></TR>
+<TR class="b">
+<TD class="left">computerState</TD><TD class="left">numerictype(1, 16, 15) 4 x 1 complex </TD><TD class="right">-0.483245849609375</TD><TD class="right">0.612701416015625</TD></TR>
+<TR class="a">
+<TD class="left">prob</TD><TD class="left">numerictype(0, 16, 16) 4 x 1 </TD><TD class="right">0</TD><TD class="right">0.4846038818359375</TD></TR>
+<TR class="b">
+<TD class="left">probFinal</TD><TD class="left">numerictype(0, 16, 16) 4 x 1 </TD><TD class="right">0</TD><TD class="right">0.4846038818359375</TD></TR>
+<TR class="a">
+<TD class="left">probQubit0</TD><TD class="left">numerictype(0, 16, 16) 2 x 1 </TD><TD class="right">0</TD><TD class="right">0.5770263671875</TD></TR>
+<TR class="b">
+<TD class="left">probQubit1</TD><TD class="left">numerictype(0, 16, 16) 2 x 1 </TD><TD class="right">0</TD><TD class="right">0.8397979736328125</TD></TR>
+</TABLE>
+
+<h2>Fixed-Point Report <span>quantumComputer_twoQubit_fixpt<span></h2>
+<pre>function [computerState, probFinal, probQubit0, probQubit1] = quantumComputer_twoQubit_fixpt(opName_0,theta_0...
+    ,phi_0,lambda_0,opName_1,theta_1,phi_1,lambda_1,initState_0,initState_1)
+    nt=numerictype(1,16,15);
+    State_template_real = fi([],nt);
+    State_template_imag = fi([],nt);
+    State_template = complexx(State_template_real,State_template_imag);
+    computerState = cast(zeros(4,1),'like',State_template);
+    initState = two_qubit_register(initState_0,initState_1);
+
+    op_0_0 = getOperator(opName_0(1,1),theta_0(1,1),phi_0(1,1),lambda_0(1,1));
+    op_1_0 = getOperator(opName_0(2,1),theta_0(2,1),phi_0(2,1),lambda_0(2,1));
+    op_2_0 = getOperator(opName_0(3,1),theta_0(3,1),phi_0(3,1),lambda_0(3,1));
+
+    op_0_1 = getOperator(opName_1(1,1),theta_1(1,1),phi_1(1,1),lambda_1(1,1));
+    
+    op_1_1 = getOperator(opName_1(2,1),theta_1(2,1),phi_1(2,1),lambda_1(2,1));
+    op_2_1 = getOperator(opName_1(3,1),theta_1(3,1),phi_1(1,1),lambda_1(3,1));
+
+    if (opName_0(1,1) == fi(15,0,16,0))
+        ControlQubit = fi(0,0,16,0);
+        op_0 = getControledOperator(op_0_1,ControlQubit);
+    else
+        if (opName_1(1,1) == fi(15,0,16,0))
+            ControlQubit = fi(1,0,16,0);
+            op_0 = getControledOperator(op_0_0,ControlQubit);
+        else
+            op_0 = prodotto_di_kronecker(op_0_0,op_0_1);
+        end
+    end
+    
+    if (opName_0(2,1) == fi(15,0,16,0))
+        ControlQubit = fi(0,0,16,0);
+        op_1 = getControledOperator(op_1_1,ControlQubit);
+    else
+        if (opName_1(2,1) == fi(15,0,16,0))
+            ControlQubit = fi(1,0,16,0);
+            op_1 = getControledOperator(op_1_0,ControlQubit);
+        else
+            op_1 = prodotto_di_kronecker(op_1_0,op_1_1);
+        end
+    end
+
+    if (opName_0(3,1) == fi(15,0,16,0))
+        ControlQubit = fi(0,0,16,0);
+        op_2 = getControledOperator(op_2_1,ControlQubit);
+    else
+        if (opName_1(3,1) == fi(15,0,16,0))
+            ControlQubit = fi(1,0,16,0);
+            op_2 = getControledOperator(op_2_0,ControlQubit);
+        else
+            op_2 = prodotto_di_kronecker(op_2_0,op_2_1);
+        end
+    end
+
+    op_temp = matrix_complex_mults_s1(op_1,op_0);
+    algMatrix = matrix_complex_mults_s2(op_2,op_temp);
+    computerState(:) = Apply_Operator(algMatrix, initState);
+    [fmo_1, fmo_2, fmo_3] = probFinal_twoQubit(computerState);
+    probFinal = fmo_1;
+    probQubit0 = fmo_2;
+    probQubit1 = fmo_3;
+end</pre><TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th></TR><TR class="a">
+<TD class="left">ControlQubit</TD><TD class="left">numerictype(0, 16, 0)</TD><TD class="right">0</TD><TD class="right">0</TD></TR>
+<TR class="b">
+<TD class="left">State_template</TD><TD class="left">numerictype(1, 16, 15) 0 x 0 complex </TD><TD class="right">Unknown</TD><TD class="right">Unknown</TD></TR>
+<TR class="a">
+<TD class="left">State_template_imag</TD><TD class="left">numerictype(1, 16, 15) 0 x 0 </TD><TD class="right">Unknown</TD><TD class="right">Unknown</TD></TR>
+<TR class="b">
+<TD class="left">State_template_real</TD><TD class="left">numerictype(1, 16, 15) 0 x 0 </TD><TD class="right">Unknown</TD><TD class="right">Unknown</TD></TR>
+<TR class="a">
+<TD class="left">algMatrix</TD><TD class="left">numerictype(1, 54, 45) 16 x 1 complex </TD><TD class="right">-0.6034705907778743</TD><TD class="right">0.6034445499307708</TD></TR>
+<TR class="b">
+<TD class="left">computerState</TD><TD class="left">numerictype(1, 16, 15) 4 x 1 complex </TD><TD class="right">-0.483245849609375</TD><TD class="right">0.612701416015625</TD></TR>
+<TR class="a">
+<TD class="left">fmo_1</TD><TD class="left">numerictype(0, 16, 16) 4 x 1 </TD><TD class="right">0.0677032470703125</TD><TD class="right">0.4846038818359375</TD></TR>
+<TR class="b">
+<TD class="left">fmo_2</TD><TD class="left">numerictype(0, 16, 16) 2 x 1 </TD><TD class="right">0.4228973388671875</TD><TD class="right">0.5770263671875</TD></TR>
+<TR class="a">
+<TD class="left">fmo_3</TD><TD class="left">numerictype(0, 16, 16) 2 x 1 </TD><TD class="right">0.160125732421875</TD><TD class="right">0.8397979736328125</TD></TR>
+<TR class="b">
+<TD class="left">initState</TD><TD class="left">numerictype(1, 33, 30) 4 x 1 complex </TD><TD class="right">0.03982720337808132</TD><TD class="right">0.5944208288565278</TD></TR>
+<TR class="a">
+<TD class="left">initState_0</TD><TD class="left">numerictype(1, 16, 15) 2 x 1 complex </TD><TD class="right">0.031524658203125</TD><TD class="right">0.772796630859375</TD></TR>
+<TR class="b">
+<TD class="left">initState_1</TD><TD class="left">numerictype(1, 16, 15) 2 x 1 complex </TD><TD class="right">0.031524658203125</TD><TD class="right">0.772796630859375</TD></TR>
+<TR class="a">
+<TD class="left">lambda_0</TD><TD class="left">numerictype(1, 16, 13) 3 x 1 </TD><TD class="right">0</TD><TD class="right">0</TD></TR>
+<TR class="b">
+<TD class="left">lambda_1</TD><TD class="left">numerictype(1, 16, 13) 3 x 1 </TD><TD class="right">-0.34912109375</TD><TD class="right">0</TD></TR>
+<TR class="a">
+<TD class="left">opName_0</TD><TD class="left">numerictype(0, 16, 0) 3 x 1 </TD><TD class="right">3</TD><TD class="right">15</TD></TR>
+<TR class="b">
+<TD class="left">opName_1</TD><TD class="left">numerictype(0, 16, 0) 3 x 1 </TD><TD class="right">11</TD><TD class="right">13</TD></TR>
+<TR class="a">
+<TD class="left">op_0</TD><TD class="left">numerictype(1, 16, 15) 16 x 1 complex </TD><TD class="right">-0.70721435546875</TD><TD class="right">0.707183837890625</TD></TR>
+<TR class="b">
+<TD class="left">op_0_0</TD><TD class="left">numerictype(1, 16, 15) 4 x 1 complex </TD><TD class="right">-1</TD><TD class="right">0.999969482421875</TD></TR>
+<TR class="a">
+<TD class="left">op_0_1</TD><TD class="left">numerictype(1, 16, 15) 4 x 1 complex </TD><TD class="right">-0.7071533203125</TD><TD class="right">0.70721435546875</TD></TR>
+<TR class="b">
+<TD class="left">op_1</TD><TD class="left">numerictype(1, 16, 15) 16 x 1 complex </TD><TD class="right">-0.3536376953125</TD><TD class="right">0.85333251953125</TD></TR>
+<TR class="a">
+<TD class="left">op_1_0</TD><TD class="left">numerictype(1, 16, 15) 4 x 1 complex </TD><TD class="right">-0.3828125</TD><TD class="right">0.92376708984375</TD></TR>
+<TR class="b">
+<TD class="left">op_1_1</TD><TD class="left">numerictype(1, 16, 15) 4 x 1 complex </TD><TD class="right">-0.3828125</TD><TD class="right">0.92376708984375</TD></TR>
+<TR class="a">
+<TD class="left">op_2</TD><TD class="left">numerictype(1, 16, 15) 16 x 1 complex </TD><TD class="right">0</TD><TD class="right">0.999969482421875</TD></TR>
+<TR class="b">
+<TD class="left">op_2_0</TD><TD class="left">numerictype(1, 16, 15) 4 x 1 complex </TD><TD class="right">0</TD><TD class="right">0</TD></TR>
+<TR class="a">
+<TD class="left">op_2_1</TD><TD class="left">numerictype(1, 16, 15) 4 x 1 complex </TD><TD class="right">-0.33026123046875</TD><TD class="right">0.9659423828125</TD></TR>
+<TR class="b">
+<TD class="left">op_temp</TD><TD class="left">numerictype(1, 35, 30) 16 x 1 complex </TD><TD class="right">-0.6034890078008175</TD><TD class="right">0.6034629661589861</TD></TR>
+<TR class="a">
+<TD class="left">phi_0</TD><TD class="left">numerictype(1, 16, 13) 3 x 1 </TD><TD class="right">0</TD><TD class="right">0</TD></TR>
+<TR class="b">
+<TD class="left">phi_1</TD><TD class="left">numerictype(1, 16, 13) 3 x 1 </TD><TD class="right">-1.57080078125</TD><TD class="right">0</TD></TR>
+<TR class="a">
+<TD class="left">probFinal</TD><TD class="left">numerictype(0, 16, 16) 4 x 1 </TD><TD class="right">0.0677032470703125</TD><TD class="right">0.4846038818359375</TD></TR>
+<TR class="b">
+<TD class="left">probQubit0</TD><TD class="left">numerictype(0, 16, 16) 2 x 1 </TD><TD class="right">0.4228973388671875</TD><TD class="right">0.5770263671875</TD></TR>
+<TR class="a">
+<TD class="left">probQubit1</TD><TD class="left">numerictype(0, 16, 16) 2 x 1 </TD><TD class="right">0.160125732421875</TD><TD class="right">0.8397979736328125</TD></TR>
+<TR class="b">
+<TD class="left">theta_0</TD><TD class="left">numerictype(1, 16, 13) 3 x 1 </TD><TD class="right">0</TD><TD class="right">0.785400390625</TD></TR>
+<TR class="a">
+<TD class="left">theta_1</TD><TD class="left">numerictype(1, 16, 13) 3 x 1 </TD><TD class="right">-1.57080078125</TD><TD class="right">0.785400390625</TD></TR>
+</TABLE>
+
+</body>
+</html>

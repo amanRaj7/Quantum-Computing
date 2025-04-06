@@ -1,4 +1,4 @@
-function op = getcontroledOperator(baseOp, ControlQubit)
+function op = getControledOperator(baseOp, ControlQubit)
     fm = fimath('RoundingMethod','Nearest',...
         'OverflowAction','Saturate',...
         'ProductMode','FullPrecision',...
@@ -14,9 +14,11 @@ function op = getcontroledOperator(baseOp, ControlQubit)
         if ControlQubit == 0
             op(:) = [eye(2) zeros(2); zeros(2) baseOp_temp];
         elseif ControlQubit == 1
-            op(:) = [1 0 0 0; 0 baseOp_temp(1,1) 0 baseOp_temp(1,2)...
-                0 0 1 0; 0 baseOp_temp(2,1) 0 baseOp_temp(2,2)];
+            op(:) = [1 0 0 0; 
+                0 baseOp_temp(1,1) 0 baseOp_temp(1,2);
+                0 0 1 0; 
+                0 baseOp_temp(2,1) 0 baseOp_temp(2,2)];
         else
-            op(:) = zeros(16,1);
+            op(:) = zeros(4);
         end
 end

@@ -1,0 +1,80 @@
+[
+  {
+    "directory": "C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\mex\\quantumComputer_twoQubit_wrapper_fixpt_cosim",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\quantumComputer_twoQubit\\cosim\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024a\\extern\\include\" /I \".\" -DMODEL=quantumComputer_twoQubit_wrapper_fixpt_cosim_mex   quantumComputer_twoQubit_wrapper_fixpt_cosim_data.c /Fobuild\\win64\\quantumComputer_twoQubit_wrapper_fixpt_cosim_data.obj",
+    "file": "quantumComputer_twoQubit_wrapper_fixpt_cosim_data.c",
+    "output": "build/win64/quantumComputer_twoQubit_wrapper_fixpt_cosim_data.obj"
+  },
+  {
+    "directory": "C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\mex\\quantumComputer_twoQubit_wrapper_fixpt_cosim",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\quantumComputer_twoQubit\\cosim\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024a\\extern\\include\" /I \".\" -DMODEL=quantumComputer_twoQubit_wrapper_fixpt_cosim_mex   rt_nonfinite.c /Fobuild\\win64\\rt_nonfinite.obj",
+    "file": "rt_nonfinite.c",
+    "output": "build/win64/rt_nonfinite.obj"
+  },
+  {
+    "directory": "C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\mex\\quantumComputer_twoQubit_wrapper_fixpt_cosim",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\quantumComputer_twoQubit\\cosim\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024a\\extern\\include\" /I \".\" -DMODEL=quantumComputer_twoQubit_wrapper_fixpt_cosim_mex   quantumComputer_twoQubit_wrapper_fixpt_cosim_initialize.c /Fobuild\\win64\\quantumComputer_twoQubit_wrapper_fixpt_cosim_initialize.obj",
+    "file": "quantumComputer_twoQubit_wrapper_fixpt_cosim_initialize.c",
+    "output": "build/win64/quantumComputer_twoQubit_wrapper_fixpt_cosim_initialize.obj"
+  },
+  {
+    "directory": "C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\mex\\quantumComputer_twoQubit_wrapper_fixpt_cosim",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\quantumComputer_twoQubit\\cosim\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024a\\extern\\include\" /I \".\" -DMODEL=quantumComputer_twoQubit_wrapper_fixpt_cosim_mex   quantumComputer_twoQubit_wrapper_fixpt_cosim_terminate.c /Fobuild\\win64\\quantumComputer_twoQubit_wrapper_fixpt_cosim_terminate.obj",
+    "file": "quantumComputer_twoQubit_wrapper_fixpt_cosim_terminate.c",
+    "output": "build/win64/quantumComputer_twoQubit_wrapper_fixpt_cosim_terminate.obj"
+  },
+  {
+    "directory": "C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\mex\\quantumComputer_twoQubit_wrapper_fixpt_cosim",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\quantumComputer_twoQubit\\cosim\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024a\\extern\\include\" /I \".\" -DMODEL=quantumComputer_twoQubit_wrapper_fixpt_cosim_mex   quantumComputer_twoQubit_wrapper_fixpt_cosim.c /Fobuild\\win64\\quantumComputer_twoQubit_wrapper_fixpt_cosim.obj",
+    "file": "quantumComputer_twoQubit_wrapper_fixpt_cosim.c",
+    "output": "build/win64/quantumComputer_twoQubit_wrapper_fixpt_cosim.obj"
+  },
+  {
+    "directory": "C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\mex\\quantumComputer_twoQubit_wrapper_fixpt_cosim",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\quantumComputer_twoQubit\\cosim\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024a\\extern\\include\" /I \".\" -DMODEL=quantumComputer_twoQubit_wrapper_fixpt_cosim_mex   quantumComputer_twoQubit_fixpt.c /Fobuild\\win64\\quantumComputer_twoQubit_fixpt.obj",
+    "file": "quantumComputer_twoQubit_fixpt.c",
+    "output": "build/win64/quantumComputer_twoQubit_fixpt.obj"
+  },
+  {
+    "directory": "C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\mex\\quantumComputer_twoQubit_wrapper_fixpt_cosim",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\quantumComputer_twoQubit\\cosim\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024a\\extern\\include\" /I \".\" -DMODEL=quantumComputer_twoQubit_wrapper_fixpt_cosim_mex   cordicsincos.c /Fobuild\\win64\\cordicsincos.obj",
+    "file": "cordicsincos.c",
+    "output": "build/win64/cordicsincos.obj"
+  },
+  {
+    "directory": "C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\mex\\quantumComputer_twoQubit_wrapper_fixpt_cosim",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\quantumComputer_twoQubit\\cosim\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024a\\extern\\include\" /I \".\" -DMODEL=quantumComputer_twoQubit_wrapper_fixpt_cosim_mex   cordicabs.c /Fobuild\\win64\\cordicabs.obj",
+    "file": "cordicabs.c",
+    "output": "build/win64/cordicabs.obj"
+  },
+  {
+    "directory": "C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\mex\\quantumComputer_twoQubit_wrapper_fixpt_cosim",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\quantumComputer_twoQubit\\cosim\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024a\\extern\\include\" /I \".\" -DMODEL=quantumComputer_twoQubit_wrapper_fixpt_cosim_mex   interface\\_coder_quantumComputer_twoQubit_wrapper_fixpt_cosim_api.c /Fobuild\\win64\\_coder_quantumComputer_twoQubit_wrapper_fixpt_cosim_api.obj",
+    "file": "interface/_coder_quantumComputer_twoQubit_wrapper_fixpt_cosim_api.c",
+    "output": "build/win64/_coder_quantumComputer_twoQubit_wrapper_fixpt_cosim_api.obj"
+  },
+  {
+    "directory": "C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\mex\\quantumComputer_twoQubit_wrapper_fixpt_cosim",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\quantumComputer_twoQubit\\cosim\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024a\\extern\\include\" /I \".\" -DMODEL=quantumComputer_twoQubit_wrapper_fixpt_cosim_mex   interface\\_coder_quantumComputer_twoQubit_wrapper_fixpt_cosim_mex.c /Fobuild\\win64\\_coder_quantumComputer_twoQubit_wrapper_fixpt_cosim_mex.obj",
+    "file": "interface/_coder_quantumComputer_twoQubit_wrapper_fixpt_cosim_mex.c",
+    "output": "build/win64/_coder_quantumComputer_twoQubit_wrapper_fixpt_cosim_mex.obj"
+  },
+  {
+    "directory": "C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\mex\\quantumComputer_twoQubit_wrapper_fixpt_cosim",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\quantumComputer_twoQubit\\cosim\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024a\\extern\\include\" /I \".\" -DMODEL=quantumComputer_twoQubit_wrapper_fixpt_cosim_mex   quantumComputer_twoQubit_wrapper_fixpt_cosim_mexutil.c /Fobuild\\win64\\quantumComputer_twoQubit_wrapper_fixpt_cosim_mexutil.obj",
+    "file": "quantumComputer_twoQubit_wrapper_fixpt_cosim_mexutil.c",
+    "output": "build/win64/quantumComputer_twoQubit_wrapper_fixpt_cosim_mexutil.obj"
+  },
+  {
+    "directory": "C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\mex\\quantumComputer_twoQubit_wrapper_fixpt_cosim",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\quantumComputer_twoQubit\\cosim\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024a\\extern\\include\" /I \".\" -DMODEL=quantumComputer_twoQubit_wrapper_fixpt_cosim_mex   interface\\_coder_quantumComputer_twoQubit_wrapper_fixpt_cosim_info.c /Fobuild\\win64\\_coder_quantumComputer_twoQubit_wrapper_fixpt_cosim_info.obj",
+    "file": "interface/_coder_quantumComputer_twoQubit_wrapper_fixpt_cosim_info.c",
+    "output": "build/win64/_coder_quantumComputer_twoQubit_wrapper_fixpt_cosim_info.obj"
+  },
+  {
+    "directory": "C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\mex\\quantumComputer_twoQubit_wrapper_fixpt_cosim",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Doc\\github\\Quantum\\Code\\matlab\\two_qubit_system\\codegen\\quantumComputer_twoQubit\\cosim\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024a\\extern\\include\" /I \".\" -DMODEL=quantumComputer_twoQubit_wrapper_fixpt_cosim_mex   \"C:\\Program Files\\MATLAB\\R2024a\\extern\\version\\c_mexapi_version.c\" /Fobuild\\win64\\c_mexapi_version.obj",
+    "file": "C:/Program Files/MATLAB/R2024a/extern/version/c_mexapi_version.c",
+    "output": "build/win64/c_mexapi_version.obj"
+  }
+]

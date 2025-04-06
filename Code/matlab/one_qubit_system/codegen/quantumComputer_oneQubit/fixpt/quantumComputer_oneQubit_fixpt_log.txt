@@ -1,0 +1,21 @@
+
+Warnings: 
+
+File: C:\Doc\github\Quantum\Code\matlab\one_qubit_system\getOperator.m, line : 26, column : 15. The expression 'op(:) = [1 0; 0 1]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\one_qubit_system\getOperator.m, line : 28, column : 15. The expression 'op(:) = [0 1; 1 0]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\one_qubit_system\getOperator.m, line : 30, column : 15. The expression 'op(:) = [0 -1i; 1i 0]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\one_qubit_system\getOperator.m, line : 32, column : 15. The expression 'op(:) = [1 0; 0 -1]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\one_qubit_system\getOperator.m, line : 34, column : 15. The expression 'op(:) = 0.707106781186547*[1 1; 1 -1]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\one_qubit_system\getOperator.m, line : 36, column : 15. The expression 'op(:) = [1 0; 0 1i]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\one_qubit_system\getOperator.m, line : 38, column : 15. The expression 'op(:) = [1 0; 0 ...
+            0.707106781186547+1i*0.707106781186547]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\one_qubit_system\getOperator.m, line : 41, column : 15. The expression 'op(:) = [1 0; 0 -1i]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\one_qubit_system\getOperator.m, line : 43, column : 15. The expression 'op(:) = [1 0; 0 ...
+            0.707106781186547-1i*0.707106781186547]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\one_qubit_system\getOperator.m, line : 46, column : 15. The expression 'op(:) = [1 0; 0 coseno_theta+1i*seno_theta]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\one_qubit_system\getOperator.m, line : 48, column : 15. The expression 'op(:) = 0.707106781186547*[1  -coseno_theta-1i*seno_theta; ...
+            coseno_phi+1i*seno_phi  coseno_theta*coseno_phi-seno_theta...
+            *seno_phi+1i*(seno_theta*coseno_phi+coseno_theta*seno_phi)]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\one_qubit_system\getOperator.m, line : 61, column : 15. The expression 'op(:) = [coseno_half_theta-1i*seno_half_theta 0; 0 coseno_half_theta+1i*seno_half_theta]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\one_qubit_system\getOperator.m, line : 63, column : 15. The expression 'op(:) = [1 0;0 1]' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Doc\github\Quantum\Code\matlab\one_qubit_system\getOperator.m, line : 65, column : 15. The expression 'op(:) = [0 0; 0 0]' was not executed during simulation. Consider using a more thorough testbench.
