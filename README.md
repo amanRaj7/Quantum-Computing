@@ -1,4 +1,5 @@
 # Quantum Computing Project
+**Note:** 🟡 In progress
 
 ## Table of Contents
 - [Introduction](#overview)
